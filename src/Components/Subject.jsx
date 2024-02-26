@@ -1,7 +1,7 @@
 
 function Subject({name,src}) {
   return (
-    <div className=" w-[90%] h-20 bg-slate-600 rounded-lg overflow-hidden flex">
+    <div className=" w-[90%] h-20 bg-slate-600 rounded-lg overflow-hidden flex cursor-pointer">
         <section className="image h-full w-20 flex justify-center place-items-center">
             <img className=" h-[40px]" src={src} alt="" />
         </section>
