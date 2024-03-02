@@ -1,12 +1,14 @@
 import Ans from "../Components/Ans"
 import axios from 'axios';
 import { useEffect, useState } from "react";
+import { htmlData } from "../json/htmlJson";
+
 function Quiz() {
   let uniqueId;
   function getRandomUniqueNumber() {
      uniqueId = [];
     while (uniqueId.length < 5) {
-      const randomNumber = Math.floor(Math.random() * 20);
+      const randomNumber = Math.floor(Math.random() * 10);
       if (!uniqueId.includes(randomNumber)) uniqueId.push(randomNumber);
     }
   }
@@ -15,13 +17,10 @@ function Quiz() {
  let qTwo = uniqueId[1];
  let qThree = uniqueId[2];
  let qFour = uniqueId[3];
+ let qFive = uniqueId[4];
 
- const [questions, setQuestions] = useState("")
+ const [question, setQuestions] = useState("")
  const [answer, setAnswer] = useState("")
-
-  useEffect(() => {
-    
-  }, []);
 
   return (
     <div className="quiz w-screen h-screen sm:flex">
