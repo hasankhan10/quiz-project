@@ -6,7 +6,7 @@ function Quiz() {
   function getRandomUniqueNumber() {
      uniqueId = [];
     while (uniqueId.length < 5) {
-      const randomNumber = Math.floor(Math.random() * 13);
+      const randomNumber = Math.floor(Math.random() * 20);
       if (!uniqueId.includes(randomNumber)) uniqueId.push(randomNumber);
     }
   }
@@ -16,37 +16,26 @@ function Quiz() {
  let qThree = uniqueId[2];
  let qFour = uniqueId[3];
 
-  const htmlApiUrl = 'https://quizapi.io/api/v1/questions?apiKey=SEmKzpWTbqcVAExeQ5Q4y2rL5g5IM9tB9n7cDjIJ&difficulty=Hard&limit=13&tags=HTML'
-
  const [questions, setQuestions] = useState("")
  const [answer, setAnswer] = useState("")
 
   useEffect(() => {
-    axios.get(htmlApiUrl)
-      .then(response => {
-        setQuestions(response.data[qOne].question)
-        setAnswer(response.data[qOne].answers)
-      })
-      .catch(error => {
-        console.error('Error fetching data:', error);
-      });
+    
   }, []);
 
   return (
-    <div className="quiz w-screen h-screen flex">
-        <section className="questions h-full w-[50%] flex place-items-center justify-center">
-            <div className=" w-[60%] h-fit text-white">
+    <div className="quiz w-screen h-screen sm:flex">
+        <section className="questions sm:h-full sm:w-[50%] w-full h-[50%] flex place-items-center justify-center">
+            <div className=" sm:w-[60%] h-fit text-white">
                 <p className=" text-xl mb-6">Question 2 of 5</p>
-                <h1 className=" text-3xl font-black font-arial">{questions}</h1>
+                <h1 className=" text-3xl font-black font-arial">Whats your problem?</h1>
 
                 <input className=" mt-16 w-[80%]" type="range" name="" id="" />
             </div>
         </section>
-        <section className="options h-full w-[50%] flex flex-col justify-center place-items-start pl-4">
-
-          {answer &&<Ans answer={answer}/>}
-            
-            <button className=" w-[60%] h-16 bg-purple-700 text-white text-3xl font-bold rounded-2xl mt-4" type="submit">Submit Answer</button>
+        <section className="options sm:h-full sm:w-[50%] h-[50%] w-full flex flex-col justify-center sm:place-items-start place-items-center pl-4">
+            <Ans />
+            <button className=" w-[60%] sm:h-16 h-12 bg-purple-700 text-white sm:text-3xl font-bold rounded-2xl mt-4" type="submit">Submit Answer</button>
         </section>
     </div>
   )
