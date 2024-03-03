@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useEffect, useState } from "react";
 import { htmlData } from "../json/htmlJson";
 
-function Quiz() {
+function Quiz({theme}) {
   let uniqueId;
   function getRandomUniqueNumber() {
      uniqueId = [];
@@ -21,9 +21,10 @@ function Quiz() {
 
  const [question, setQuestions] = useState("")
  const [answer, setAnswer] = useState("")
+ 
 
   return (
-    <div className="quiz w-screen h-screen sm:flex">
+    <div className="quiz w-screen h-screen sm:flex" style={!theme ?{backgroundImage:"url(https://cdn.dribbble.com/users/4721099/screenshots/17850675/media/32ca7ef12dec272972aafe965b95b334.jpg)"}: {backgroundImage:"url(https://cdn.dribbble.com/users/756060/screenshots/17039572/media/8e8163fa369a279d6639903ea0f5838e.png)"}}>
         <section className="questions sm:h-full sm:w-[50%] w-full h-[50%] flex place-items-center justify-center">
             <div className=" sm:w-[60%] h-fit text-white">
                 <p className=" text-xl mb-6">Question 2 of 5</p>
@@ -33,8 +34,8 @@ function Quiz() {
             </div>
         </section>
         <section className="options sm:h-full sm:w-[50%] h-[50%] w-full flex flex-col justify-center sm:place-items-start place-items-center pl-4">
-            <Ans />
-            <button className=" w-[60%] sm:h-16 h-12 bg-purple-700 text-white sm:text-3xl font-bold rounded-2xl mt-4" type="submit">Submit Answer</button>
+            <Ans theme = {theme}/>
+            <button  className=" w-[60%] sm:h-16 h-12 bg-purple-700 text-white sm:text-3xl font-bold rounded-2xl mt-4" type="submit">Submit Answer</button>
         </section>
     </div>
   )
