@@ -2,9 +2,25 @@ import Ans from "../Components/Ans"
 import axios from 'axios';
 import { useEffect, useState } from "react";
 import { htmlData } from "../json/htmlJson";
-import { useOutletContext } from "react-router-dom";
+import { useOutletContext, useNavigate, useParams } from "react-router-dom";
 
 function Quiz() {
+  const navigate = useNavigate()
+  let {id} = useParams();
+  let token = localStorage.getItem('key')
+
+useEffect(()=>{
+  if ( id === token) {
+    
+    navigate(`/quiz/${id}`);
+  } else {
+    navigate("/")
+  }
+
+},[])
+
+
+
   let uniqueId;
   let theme = useOutletContext()
   function getRandomUniqueNumber() {
@@ -14,6 +30,7 @@ function Quiz() {
       if (!uniqueId.includes(randomNumber)) uniqueId.push(randomNumber);
     }
   }
+
  getRandomUniqueNumber()
  let qOne = uniqueId[0];
  let qTwo = uniqueId[1];

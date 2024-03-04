@@ -1,7 +1,10 @@
-import { useOutletContext } from "react-router-dom"
+import { useEffect } from "react"
+import { useOutletContext,useNavigate } from "react-router-dom"
 
 function Result() {
   let theme = useOutletContext()
+  const history = useNavigate()
+
   return (
     <div className="result w-screen h-screen flex justify-center place-items-center text-white" style={!theme ?{backgroundImage:"url(https://cdn.dribbble.com/users/4721099/screenshots/17850675/media/32ca7ef12dec272972aafe965b95b334.jpg)"}: {backgroundImage:"url(https://cdn.dribbble.com/users/756060/screenshots/17039572/media/8e8163fa369a279d6639903ea0f5838e.png)"}}>
         <section className=" sm:w-[50%] w-[80%] h-[70%] flex flex-col justify-center place-items-center gap-3">
