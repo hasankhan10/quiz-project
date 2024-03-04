@@ -3,20 +3,19 @@
 @tailwind utilities;
 
 .home{
-    background-image: url("https://cdn.dribbble.com/users/4721099/screenshots/17850675/media/32ca7ef12dec272972aafe965b95b334.jpg");
+    /* background-image: url("https://cdn.dribbble.com/users/4721099/screenshots/17850675/media/32ca7ef12dec272972aafe965b95b334.jpg"); */
     background-repeat: no-repeat;
     object-fit: fill;
     background-position: cover;
-
 }
 .quiz{
-    background-image: url("https://cdn.dribbble.com/users/4721099/screenshots/17850675/media/32ca7ef12dec272972aafe965b95b334.jpg");
+    /* background-image: url("https://cdn.dribbble.com/users/4721099/screenshots/17850675/media/32ca7ef12dec272972aafe965b95b334.jpg"); */
     background-repeat: no-repeat;
     object-fit: fill;
     background-position: cover;
 }
 .result{
-    background-image: url("https://cdn.dribbble.com/users/4721099/screenshots/17850675/media/32ca7ef12dec272972aafe965b95b334.jpg");
+    /* background-image: url("https://cdn.dribbble.com/users/4721099/screenshots/17850675/media/32ca7ef12dec272972aafe965b95b334.jpg"); */
     background-repeat: no-repeat;
     object-fit: fill;
     background-position: cover;

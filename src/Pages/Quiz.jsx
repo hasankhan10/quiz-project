@@ -2,9 +2,11 @@ import Ans from "../Components/Ans"
 import axios from 'axios';
 import { useEffect, useState } from "react";
 import { htmlData } from "../json/htmlJson";
+import { useOutletContext } from "react-router-dom";
 
-function Quiz({theme}) {
+function Quiz() {
   let uniqueId;
+  let theme = useOutletContext()
   function getRandomUniqueNumber() {
      uniqueId = [];
     while (uniqueId.length < 5) {

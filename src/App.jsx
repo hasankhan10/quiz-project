@@ -3,17 +3,20 @@ import Navbar from "./Components/Navbar"
 import Home from "./Pages/Home"
 import Quiz from "./Pages/Quiz"
 import Result from "./Pages/Result"
+import { Outlet } from "react-router-dom"
 
 function App() {
-  let bgTheme;
-  const [theme, setTheme] = useState()
+
+  const [theme, setTheme] = useState(false)
   const handleMode = (mode) => {
     setTheme(mode)
   }
+
   return (
     <>  
         <Navbar handleMode={handleMode}/>
-        <Result theme = {theme}/>
+        {/* <Home theme={theme} /> */}
+        <Outlet  context={theme}/>
     </>
   )
 }

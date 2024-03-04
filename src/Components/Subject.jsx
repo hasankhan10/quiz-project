@@ -6,7 +6,7 @@ function Subject({name,src,theme}) {
             <img className=" h-[40px]" src={src} alt="" />
         </section>
         <section className="image-name h-full w-full flex place-items-center text-white">
-            <h1 className=" text-2xl font-bold ml-3 " style={theme ?{color:"black"}:{color:"white"}}>{name}</h1>
+            <h1 className=" text-2xl font-bold ml-3 " style={theme ?{color:"white"}:{color:"white"}}>{name}</h1>
         </section>
     </div>
   )
