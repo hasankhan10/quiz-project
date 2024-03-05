@@ -51,3 +51,5 @@ const javaScriptData = [
     }    
 
 ]
+
+export { javaScriptData}

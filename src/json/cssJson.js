@@ -50,3 +50,4 @@ const cssData = [
         "answer": "font-style"
     }
 ]
+export {cssData}
