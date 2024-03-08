@@ -41,7 +41,7 @@ const javaScriptData = [
     },
     {
         "question": "What does the typeof operator return for null in JavaScript?",
-        "options": ["null","undefined","object","null"],
+        "options": ["null","undefined","object","NaN"],
         "answer": "object"
     },
     {
