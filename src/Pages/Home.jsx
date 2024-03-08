@@ -27,15 +27,15 @@ function Home() {
         <div className=" h-full sm:w-[45%] w-full flex sm:justify-start sm:place-items-center place-items-start justify-center">
           <section className=" sm:h-[50%] h-[70%] sm:w-[50%] w-[90%] sm:ml-8 flex flex-col justify-center place-items-center gap-8 sm:gap-10 mr-2 sm:mr-0">
             
-            <NavLink onClick={() => handleSave('html')} to={"quiz/html"} style={{width:"90%", display:"flex", justifyContent:"center"}}>
+            <NavLink className={"sub"} onClick={() => handleSave('html')} to={"quiz/html"} style={{width:"90%", display:"flex", justifyContent:"center"}}>
               <Subject name="HTML" src = "https://cdn-icons-png.flaticon.com/512/1051/1051277.png" theme ={theme} />
             </NavLink>
 
-            <NavLink onClick={() => handleSave('css')} to={"quiz/css"} style={{width:"90%", display:"flex", justifyContent:"center"}}>
+            <NavLink className={"sub"} onClick={() => handleSave('css')} to={"quiz/css"} style={{width:"90%", display:"flex", justifyContent:"center"}}>
             <Subject name="CSS" src = "https://cdn-icons-png.flaticon.com/512/732/732190.png" theme ={theme}/>
             </NavLink>
             
-            <NavLink onClick={() => handleSave('js')} to={"quiz/javascript"} style={{width:"90%", display:"flex", justifyContent:"center"}}>
+            <NavLink className={"sub"} onClick={() => handleSave('js')} to={"quiz/javascript"} style={{width:"90%", display:"flex", justifyContent:"center"}}>
               <Subject name = "JAVASCRIPT" src = "https://cdn-icons-png.flaticon.com/512/5968/5968292.png" theme ={theme}/>
             </NavLink>
             

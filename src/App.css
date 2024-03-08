@@ -20,3 +20,23 @@
     object-fit: fill;
     background-position: cover;
 }
+
+.sub{
+    transition: all 0.1s linear;
+}
+.sub:hover{
+    scale: 1.04;
+}
+.ans{
+    transition: all 0.1s linear;
+}
+.ans:hover{
+    scale: 1.04;
+}
+
+.play{
+    transition: all 0.1s linear;
+}
+.play:hover{
+    scale: 1.04;
+}

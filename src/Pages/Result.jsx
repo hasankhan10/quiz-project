@@ -26,7 +26,7 @@ function Result() {
                 <section className=" w-full h-[60%] flex justify-center place-items-center sm:text-[10rem] text-[7rem] font-semibold" style={theme ? {color:"black"}:{color:"white"}}>{result}</section>
                 <section className=" w-full h-[20%] flex justify-center place-items-center text-3xl font-semibold" style={theme ? {color:"black"}:{color:"white"}}>out of 5</section>
             </div>
-            <button onClick={restart} className=" w-[60%] h-[15%] bg-purple-900 rounded-lg text-3xl font-bold cursor-pointer">Play Again</button>
+            <button onClick={restart} className="play w-[60%] h-[15%] bg-purple-900 rounded-lg text-3xl font-bold cursor-pointer">Play Again</button>
         </section>
     </div>
   )

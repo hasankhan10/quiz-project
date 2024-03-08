@@ -64,7 +64,6 @@ useEffect(()=>{
      
   }
 }
-console.log(result);
 if(index === 5) navigate('/result', { state: { id: id, result: result } });
   
 
