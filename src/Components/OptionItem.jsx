@@ -8,7 +8,7 @@ const OptionItem = ({theme, option,index,border,selectIndex}) => {
 
         <h1 className=" sm:h-22 sm:w-20 flex justify-center place-items-center sm:text-4xl font-bold mr-3 sm:mr-0">{index+1}.</h1>
 
-        <p className=" h-full w-fit flex justify-center place-items-center sm:text-3xl font-semibold">{option.toString()}</p>
+        <p className=" h-full w-fit flex justify-center place-items-center sm:text-2xl font-mono">{option.toString()}</p>
             
     </section>
   )

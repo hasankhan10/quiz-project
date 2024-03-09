@@ -15,7 +15,7 @@ function Ans({theme,options,getValue}) {
         
         setSelectIndex(index)
         if(value===null){
-            alert("select properly")
+            alert("try to tab in empty space")
         }
         else{
             setBorder("4px solid white")

@@ -4,7 +4,6 @@ import { htmlData } from "../json/htmlJson";
 import { cssData } from "../json/cssJson";
 import { javaScriptData } from "../json/javaScriptJson";
 import { useOutletContext, useNavigate, useParams, NavLink } from "react-router-dom";
-import { Result } from "postcss";
 
 let index = 0;
 let data;

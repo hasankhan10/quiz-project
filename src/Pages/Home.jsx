@@ -1,5 +1,4 @@
 import { NavLink, useOutletContext, useNavigate} from "react-router-dom"
-import Navbar from "../Components/Navbar"
 import Subject from "../Components/Subject"
 
 const token = {
@@ -16,7 +15,9 @@ function Home() {
     localStorage.setItem("key",token[data])
   }
   return (
-    <div className="home w-screen h-screen bg-slate-600 flex sm:flex-row flex-col" style={!theme ?{backgroundImage:"url(https://cdn.dribbble.com/users/4721099/screenshots/17850675/media/32ca7ef12dec272972aafe965b95b334.jpg)"}: {backgroundImage:"url(https://cdn.dribbble.com/users/756060/screenshots/17039572/media/8e8163fa369a279d6639903ea0f5838e.png)"}}>
+    <div 
+    className="home w-screen h-screen bg-slate-600 flex sm:flex-row flex-col"
+    style={!theme ?{backgroundImage:"url(https://cdn.dribbble.com/users/4721099/screenshots/17850675/media/32ca7ef12dec272972aafe965b95b334.jpg)"}: {backgroundImage:"url(https://cdn.dribbble.com/users/756060/screenshots/17039572/media/8e8163fa369a279d6639903ea0f5838e.png)"}}>
         <div className=" h-full sm:w-[55%] w-full flex justify-center place-items-center">
             <section className=" h-[40%] sm:w-[60%] w-full text-white sm:pl-8 flex flex-col justify-center place-items-center mt-10 sm:mt-0" >
               <p className=" sm:text-5xl text-4xl font-thin">Wellcome to the</p>
